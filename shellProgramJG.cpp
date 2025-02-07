@@ -79,15 +79,16 @@ int main() {
         int pid;
         int pip[2];
         char instring[20];
+        int count;
 
         pipe(pip);
 
         pid = fork();
         if (pid == 0) {
-            int write(int fd, const void buf[count], int count);
+            int write(int fd, const void buf[count]);
         }
         else {
-            int read(int fd, const void buf[count], int count);
+            int read(int fd, const void buf[count]);
         }
     }
     else if (input == "quit") {
