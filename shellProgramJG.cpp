@@ -76,7 +76,19 @@ int main() {
         }
     }
     else if (input == "hiMom") {
-        
+        int pid;
+        int pip[2];
+        char instring[20];
+
+        pipe(pip);
+
+        pid = fork();
+        if (pid == 0) {
+            int write(int fd, const void buf[count], int count);
+        }
+        else {
+            int read(int fd, const void buf[count], int count);
+        }
     }
     else if (input == "quit") {
         history.close();
