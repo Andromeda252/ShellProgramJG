@@ -20,7 +20,7 @@ void signalHandler(int signum) {
         cout << content;
     }
     history.close();
-    system("quit");
+    system("exit()");
 }
 
 int main() {
@@ -72,7 +72,7 @@ int main() {
             redirectFile.close();
         }
         else {
-            cout << "failure";
+            cout << word << endl;
         }
     }
     else if (input == "quit") {
@@ -83,7 +83,7 @@ int main() {
             cout << content;
         }
         history.close();
-        system("exit");
+        system("exit()");
     }
     else if (input == "help") {
         system("help"); //cout functions for YOUR shell 
