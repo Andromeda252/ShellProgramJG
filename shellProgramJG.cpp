@@ -75,6 +75,9 @@ int main() {
             cout << word << endl;
         }
     }
+    else if (input == "hiMom") {
+        
+    }
     else if (input == "quit") {
         history.close();
         history.open("historyFile.txt", ios::out);
@@ -84,6 +87,7 @@ int main() {
         }
         history.close();
         system("exit");
+        //I have no idea why but I just cannot for the life of me get this to work
     }
     else if (input == "help") {
         system("help"); //cout functions for YOUR shell 
