@@ -117,7 +117,18 @@ int main() {
         //I have no idea why but I just cannot for the life of me get this to work
     }
     else if (input == "help") {
-        system("help"); //cout functions for YOUR shell 
+        cout << "myprocess - Return the current process ID" << endl;
+        cout << "allprocesses - Return all current processes" << endl;
+        cout << "chgd <directory> - Change the current working directory to <directory>" << endl;
+        cout << "clr - Clear the screen" << endl;
+        cout << "dir <directory> - List the contents of <directory>" << endl;
+        cout << "environ - List all the environment strings" << endl;
+        cout << "quit - Quit the shell" << endl;
+        cout << "help - Display the user manual" << endl;
+        cout << "repeat <string> - Output the string to the console" << endl;
+        cout << "repeat <string> > <filename> - Redirect the string to the specified file" << endl;
+        cout << "hiMom - Execute parent-child process communication" << endl;
+        cout << "Ctrl-C - Perform a signal interrupt" << endl;
     }
     else {
         system("input.c_str()");
