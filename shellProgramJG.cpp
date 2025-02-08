@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <sstream>
 #include <signal.h>
@@ -21,6 +22,14 @@ void signalHandler(int signum) {
     }
     history.close();
     system("exit");
+}
+
+void write(int fd, const char *buf, int count) {
+    write(fd, buf, count);
+}
+
+void readPipe(int fd, char *buf, int count) {
+    read(fd, buf, count);
 }
 
 int main() {
@@ -85,10 +94,15 @@ int main() {
 
         pid = fork();
         if (pid == 0) {
-            int write(int fd, const void buf[count]);
+            close(pip[0]);
+            write(pip[1], "hiMom", 5);
+            close(pip[1]);
         }
         else {
-            int read(int fd, const void buf[count]);
+            close(pip[1]);
+            readPipe(pip[0], instring, 20);
+            close(pip[0]);
+            printf("%s\n", instring);
         }
     }
     else if (input == "quit") {
